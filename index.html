@@ -4,24 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>هدية وفكرة | Gift & Idea</title>
-    
+
+    <!-- ✅ Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KHQLZDGNLK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-KHQLZDGNLK');
+    </script>
+
     <!-- Performance Preloads -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" as="image" href="https://res.cloudinary.com/davrmxpo2/video/upload/so_0,f_auto,q_auto:low,w_1080/1768907076510466_dvgk3g.jpg">
-    
+
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Inter:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
           extend: {
             colors: {
-              primary: '#26C6DA', // Teal
-              secondary: '#EC407A', // Pink
+              primary: '#26C6DA',
+              secondary: '#EC407A',
               charcoal: '#1A1A1A',
               gold: {
-                500: '#D4AF37', 
+                500: '#D4AF37',
                 600: '#B8860B',
               },
             },
@@ -32,19 +44,18 @@
               englishBody: ['Inter', 'sans-serif'],
             },
             boxShadow: {
-              'soft': '0 10px 40px -10px rgba(0,0,0,0.05)',
-              'glow': '0 0 20px rgba(38, 198, 218, 0.3)',
+              soft: '0 10px 40px -10px rgba(0,0,0,0.05)',
+              glow: '0 0 20px rgba(38, 198, 218, 0.3)',
             }
           },
         },
       };
     </script>
+
+    <!-- Custom Styles -->
     <style>
-      body {
-        background-color: #FAFAFA;
-      }
-      
-      /* Modern Brand Gradient */
+      body { background-color: #FAFAFA; }
+
       .bg-brand-gradient {
         background: linear-gradient(135deg, #26C6DA 0%, #EC407A 100%);
       }
@@ -58,108 +69,43 @@
         border-image-slice: 1;
       }
 
-      /* Animated Gradient for Header/Marquee */
       .bg-animated-gradient {
         background: linear-gradient(270deg, #26C6DA, #29b6f6, #26C6DA);
         background-size: 200% 200%;
         animation: gradientShift 6s ease infinite;
       }
-
       @keyframes gradientShift {
         0% { background-position: 0% 50%; }
         50% { background-position: 100% 50%; }
         100% { background-position: 0% 50%; }
       }
 
-      /* Logo Underline Animation */
-      .logo-underline {
-        position: relative;
-      }
-      .logo-underline::after {
-        content: '';
-        position: absolute;
-        width: 0;
-        height: 3px;
-        bottom: -4px;
-        left: 0;
-        background-color: #26C6DA; /* Primary Blue/Teal */
-        transition: width 0.3s ease-in-out;
-        border-radius: 2px;
-      }
-      .logo-underline:hover::after,
-      .logo-underline:focus::after {
-        width: 100%;
-      }
-
-      /* --- NEW MARQUEE CSS (Seamless Loop) --- */
-      .marquee-container {
-        position: relative;
-        overflow: hidden;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-      }
-
-      .marquee-track {
-        display: flex;
-        flex-wrap: nowrap;
-        white-space: nowrap;
-        /* Start from left (-100%) and move to 0 to simulate Left->Right movement */
-        /* SPEEDED UP: Changed from 35s to 20s */
-        animation: scroll-reverse 20s linear infinite; 
-        width: fit-content;
-      }
-
-      /* 
-         Logic: We have [Content A][Content A]
-         We want to move RIGHT.
-         Start at translateX(-50%) (The middle, where the second copy starts)
-         Move to translateX(0%) (The start, where the first copy is)
-         This creates a seamless slide to the right.
-      */
-      @keyframes scroll-reverse {
-        0% { transform: translateX(-50%); }
-        100% { transform: translateX(0%); }
-      }
-      
-      /* Pause on hover for readability */
-      .marquee-container:hover .marquee-track {
-        animation-play-state: paused;
-      }
-
-      .marquee-item {
-        flex-shrink: 0;
-        padding: 0 4rem; /* Spacing between the text repeat */
-        display: flex;
-        align-items: center;
-      }
-      
-      /* Default Scrollbar matching Primary Brand */
       ::-webkit-scrollbar { width: 6px; }
-      ::-webkit-scrollbar-track { background: #f1f1f1; }
       ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
       ::-webkit-scrollbar-thumb:hover { background: #26C6DA; }
     </style>
 
-  <link rel="stylesheet" href="/index.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/index.css">
+
+    <!-- Import Map -->
     <script type="importmap">
-{
-  "imports": {
-    "react": "https://esm.sh/react@^19.2.3",
-    "react-dom": "https://esm.sh/react-dom@^19.2.3",
-    "react-router-dom": "https://esm.sh/react-router-dom@^7.12.0",
-    "zustand": "https://esm.sh/zustand@^5.0.10",
-    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
-    "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@^2.39.7",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "zustand/": "https://esm.sh/zustand@^5.0.10/"
-  }
-}
-</script>
-  <script type="module" crossorigin src="/assets/index-CTxIwhmk.js"></script>
-</head>
+    {
+      "imports": {
+        "react": "https://esm.sh/react@^19.2.3",
+        "react-dom": "https://esm.sh/react-dom@^19.2.3",
+        "react-router-dom": "https://esm.sh/react-router-dom@^7.12.0",
+        "zustand": "https://esm.sh/zustand@^5.0.10",
+        "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+        "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@^2.39.7"
+      }
+    }
+    </script>
+
+    <!-- App Bundle -->
+    <script type="module" crossorigin src="/assets/index-CTxIwhmk.js"></script>
+  </head>
+
   <body>
     <div id="root"></div>
   </body>
