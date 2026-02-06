@@ -4,6 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>هدية وفكرة | Gift & Idea</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KHQLZDGNLK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-KHQLZDGNLK');
+    </script>
     
     <!-- Performance Preloads -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,11 +27,11 @@
         theme: {
           extend: {
             colors: {
-              primary: '#26C6DA', // Teal
-              secondary: '#EC407A', // Pink
+              primary: '#26C6DA',
+              secondary: '#EC407A',
               charcoal: '#1A1A1A',
               gold: {
-                500: '#D4AF37', 
+                500: '#D4AF37',
                 600: '#B8860B',
               },
             },
@@ -40,15 +49,10 @@
         },
       };
     </script>
+
     <style>
-      body {
-        background-color: #FAFAFA;
-      }
-      
-      /* Modern Brand Gradient */
-      .bg-brand-gradient {
-        background: linear-gradient(135deg, #26C6DA 0%, #EC407A 100%);
-      }
+      body { background-color: #FAFAFA; }
+      .bg-brand-gradient { background: linear-gradient(135deg, #26C6DA 0%, #EC407A 100%); }
       .text-brand-gradient {
         background: linear-gradient(135deg, #26C6DA 0%, #EC407A 100%);
         -webkit-background-clip: text;
@@ -58,24 +62,17 @@
         border-image: linear-gradient(135deg, #26C6DA 0%, #EC407A 100%);
         border-image-slice: 1;
       }
-
-      /* Animated Gradient for Header/Marquee */
       .bg-animated-gradient {
         background: linear-gradient(270deg, #26C6DA, #29b6f6, #26C6DA);
         background-size: 200% 200%;
         animation: gradientShift 6s ease infinite;
       }
-
       @keyframes gradientShift {
         0% { background-position: 0% 50%; }
         50% { background-position: 100% 50%; }
         100% { background-position: 0% 50%; }
       }
-
-      /* Logo Underline Animation */
-      .logo-underline {
-        position: relative;
-      }
+      .logo-underline { position: relative; }
       .logo-underline::after {
         content: '';
         position: absolute;
@@ -83,16 +80,13 @@
         height: 3px;
         bottom: -4px;
         left: 0;
-        background-color: #26C6DA; /* Primary Blue/Teal */
+        background-color: #26C6DA;
         transition: width 0.3s ease-in-out;
         border-radius: 2px;
       }
       .logo-underline:hover::after,
-      .logo-underline:focus::after {
-        width: 100%;
-      }
+      .logo-underline:focus::after { width: 100%; }
 
-      /* --- NEW MARQUEE CSS (Reversed Direction) --- */
       .marquee-container {
         position: relative;
         overflow: hidden;
@@ -102,60 +96,49 @@
         align-items: center;
         background: inherit;
       }
-
       .marquee-track {
         display: flex;
         flex-wrap: nowrap;
         white-space: nowrap;
-        width: max-content; 
-        /* Changed Animation to move RIGHT */
-        animation: scroll 40s linear infinite; 
+        width: max-content;
+        animation: scroll 40s linear infinite;
       }
-
-      /* REVERSED: Moves from -50% to 0 (Rightward movement) */
       @keyframes scroll {
         0% { transform: translateX(-50%); }
         100% { transform: translateX(0); }
       }
-      
-      /* Pause on hover */
-      .marquee-container:hover .marquee-track {
-        animation-play-state: paused;
-      }
-
+      .marquee-container:hover .marquee-track { animation-play-state: paused; }
       .marquee-item {
         flex-shrink: 0;
-        padding: 0 4rem; 
+        padding: 0 4rem;
         display: flex;
         align-items: center;
       }
-      
       ::-webkit-scrollbar { width: 6px; }
       ::-webkit-scrollbar-track { background: #f1f1f1; }
       ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
       ::-webkit-scrollbar-thumb:hover { background: #26C6DA; }
     </style>
 
-  <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="/index.css">
+
     <script type="importmap">
-{
-  "imports": {
-    "react": "https://esm.sh/react@^19.2.3",
-    "react-dom": "https://esm.sh/react-dom@^19.2.3",
-    "react-router-dom": "https://esm.sh/react-router-dom@^7.12.0",
-    "zustand": "https://esm.sh/zustand@^5.0.10",
-    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
-    "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@^2.39.7",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "zustand/": "https://esm.sh/zustand@^5.0.10/",
-    "@vercel/node": "https://esm.sh/@vercel/node@^5.5.28",
-    "cloudinary": "https://esm.sh/cloudinary@^2.9.0"
-  }
-}
-</script>
-  <script type="module" crossorigin src="/assets/index-BzXPaDFg.js"></script>
-</head>
+    {
+      "imports": {
+        "react": "https://esm.sh/react@^19.2.3",
+        "react-dom": "https://esm.sh/react-dom@^19.2.3",
+        "react-router-dom": "https://esm.sh/react-router-dom@^7.12.0",
+        "zustand": "https://esm.sh/zustand@^5.0.10",
+        "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+        "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@^2.39.7",
+        "@vercel/node": "https://esm.sh/@vercel/node@^5.5.28",
+        "cloudinary": "https://esm.sh/cloudinary@^2.9.0"
+      }
+    }
+    </script>
+
+    <script type="module" crossorigin src="/assets/index-BzXPaDFg.js"></script>
+  </head>
   <body>
     <div id="root"></div>
   </body>
